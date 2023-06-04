@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Layout Example</title>
+  <style>
+    /* Reset default styles */
+    body, h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Set box-sizing to border-box */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Common styles for sections and section titles */
+    .section {
+      position: relative;
+      border: 1px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #FFC0CB; /* Set unique color for section title */
+      color: white; /* Adjust text color for readability */
+      padding: 5px;
+    }
+
+    /* Desktop view */
+    @media screen and (min-width: 992px) {
+      .section {
+        width: 33.33%; /* Each section takes up 1/3 of the width */
+        float: left;
+      }
+    }
+
+    /* Tablet view */
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .section {
+        width: 50%; /* Each section takes up 1/2 of the width */
+        float: left;
+      }
+      .section:nth-child(3) {
+        clear: both; /* Move the third section to a new row */
+      }
+    }
+
+    /* Mobile view */
+    @media screen and (max-width: 767px) {
+      .section {
+        width: 100%; /* Each section takes up the entire width */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Page Heading</h1>
+
+  <div class="section">
+    <div class="section-title">Chicken</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Beef</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Sushi</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</body>
+</html>
